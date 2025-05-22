@@ -1,0 +1,65 @@
+/* HUD en línea horizontal */
+.retro-hud-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #5D2906;
+  border: 4px solid #3D1D02;
+  border-radius: 8px;
+  padding: 10px;
+  color: #FFD700;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.hud-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hud-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.hud-value {
+  font-size: 18px;
+  color: white;
+  min-width: 60px;
+  text-align: center;
+}
+
+.room-code {
+  color: #4CAF50;
+  letter-spacing: 1px;
+}
+
+.time {
+  color: #FF5722;
+}
+
+.lives {
+  color: #F44336;
+}
+
+/* Efectos de cambio de vida */
+.life-change {
+  position: absolute;
+  font-size: 12px;
+  animation: float-up 1s ease-out forwards;
+}
+
+.life-change.gained {
+  color: #4CAF50;
+}
+
+.life-change.lost {
+  color: #F44336;
+}
+
+@keyframes float-up {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
