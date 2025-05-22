@@ -35,7 +35,7 @@ export const WebSocketProvider: React.FC<{children: React.ReactNode}> = ({ child
       }
 
       const client = new Client({
-        brokerURL: 'ws://localhost:8080/ws',
+        brokerURL: 'wss://backbomberman-grbmh2hdbnbtcfd6.canadacentral-01.azurewebsites.net/ws',
 
         reconnectDelay: 5000,
         heartbeatIncoming: 4000,
